@@ -165,11 +165,11 @@ function Calendar() {
         <div className="flex items-center gap-2 lg:gap-3">
           <Menu as="div" className="relative inline-block text-left">
             <div className="flex items-center">
-              <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-full text-white border-0.5 lg:px-6 px-3 py-2 text-xs lg:text-lg shadow-sm ring-1 ring-inset ring-gray-300 hover:opacity-70 opacity-50">
+              <MenuButton className=" inline-flex w-full justify-center gap-x-1.5 rounded-full text-white border-0.5 lg:px-6 px-3 py-2 text-xs lg:text-lg shadow-sm ring-1 ring-inset ring-gray-300 hover:opacity-70 opacity-50">
                 {filterStatus}
                 <ChevronDownIcon
                   aria-hidden="true"
-                  className="w-4 h-4 -mr-1 text-gray-400 lg:w-8 lg:h-8"
+                  className="w-4 h-4 -mr-1 text-gray-400 lg:w-8 lg:h-8 filtered"
                 />
               </MenuButton>
             </div>

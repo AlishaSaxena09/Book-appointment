@@ -103,6 +103,10 @@ body {
   border-radius: 9px;
 }
 
+.filtered {
+  margin-top: -3px;
+}
+
 .menu:hover {
   background-color: gray;
   opacity: 70%;
@@ -149,5 +153,9 @@ body {
   #headlessui-menu-button {
     width: 3px;
     height: 18px;
+  }
+
+  .filtered {
+    margin-top: 0;
   }
 }
