@@ -120,7 +120,7 @@ function Calendar() {
       return acc;
     }, {});
 
-  const timeSlots = Array.from({ length: 7 }, (_, i) => i + 9); // From 9 AM to 8 PM
+  const timeSlots = Array.from({ length: 12 }, (_, i) => i + 9); // From 9 AM to 8 PM
 
   const filteredSlots =
     filterStatus === "All appointments"

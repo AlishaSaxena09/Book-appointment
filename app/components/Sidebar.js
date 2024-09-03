@@ -135,7 +135,7 @@ function Sidebar({ handleOpen, sidebar, menuItems }) {
       <div
         onClick={handleOpen}
         className={` ${
-          sidebar ? "absolute" : "relative mt-24 h-screen"
+          sidebar ? "absolute z-[99]" : "relative mt-24 h-screen"
         } top-[10%] right-[-5%]`}
       >
         {backArr}
