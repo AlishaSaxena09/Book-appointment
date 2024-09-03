@@ -128,10 +128,10 @@ function Calendar() {
       : slots.filter((slot) => slot.status === filterStatus);
 
   return (
-    <div className="w-full">
+    <div className="relative w-full lg:block">
       {/* calendar */}
-      <div className="flex justify-between w-full px-16 py-12">
-        <div>
+      <div className="flex flex-wrap justify-between w-full gap-4 p-6 lg:py-12 lg:px-16">
+        <div className="hidden lg:block">
           <DatePicker
             value={selectedDate}
             onChange={handleDateChange}
@@ -146,15 +146,30 @@ function Calendar() {
             defaultValue={today(getLocalTimeZone())}
           />
         </div>
+        <div className="block lg:hidden">
+          <DatePicker
+            value={selectedDate}
+            onChange={handleDateChange}
+            radius="full"
+            size="xs"
+            color="secondary"
+            variant="bordered"
+            style={{
+              color: "white",
+              borderWidth: "1px !important",
+            }}
+            defaultValue={today(getLocalTimeZone())}
+          />
+        </div>
         {/* menu */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 lg:gap-3">
           <Menu as="div" className="relative inline-block text-left">
             <div className="flex items-center">
-              <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-full text-white border-0.5 px-6 py-2 text-lg shadow-sm ring-1 ring-inset ring-gray-300 hover:opacity-70 opacity-50">
+              <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-full text-white border-0.5 lg:px-6 px-3 py-2 text-xs lg:text-lg shadow-sm ring-1 ring-inset ring-gray-300 hover:opacity-70 opacity-50">
                 {filterStatus}
                 <ChevronDownIcon
                   aria-hidden="true"
-                  className="w-8 h-8 -mr-1 text-gray-400"
+                  className="w-4 h-4 -mr-1 text-gray-400 lg:w-8 lg:h-8"
                 />
               </MenuButton>
             </div>
@@ -200,14 +215,14 @@ function Calendar() {
             </MenuItems>
           </Menu>
 
-          <div className="w-auto p-2 border border-white rounded-full opacity-50 hover:opacity-70">
+          <div className="w-auto p-1 border border-white rounded-full opacity-50 lg:p-2 hover:opacity-70">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="white"
-              className="size-6"
+              className="lg:size-6 size-4"
             >
               <path
                 strokeLinecap="round"
@@ -224,11 +239,11 @@ function Calendar() {
         </div>
       </div>
 
-      <div className="py-4 bg-primaryGray">
+      <div className="py-4 lg:py-8 bg-primaryGray">
         {/* status chips */}
-        <div className="flex w-full gap-8 p-8 px-16">
+        <div className="absolute top-0 right-0 flex flex-col w-auto gap-2 px-8 py-4 lg:pb-12 lg:px-16 lg:w-full lg:flex-row lg:relative lg:gap-8">
           <div className="flex items-center gap-2 px-3 py-2 text-sm text-white border border-2 border-green-500 rounded-full chips">
-            <div className="w-4 h-4 bg-green-500 rounded-full chip"></div>
+            <div className="w-2 h-2 bg-green-500 rounded-full chip"></div>
             Completed
           </div>
           <div className="flex items-center gap-2 px-4 py-2 text-white border border-2 border-blue-800 rounded-full chips">
@@ -257,12 +272,12 @@ function Calendar() {
                   </span>
                 </div>
                 {/* Slots within this hour */}
-                <div className="flex gap-4 px-6 py-4 pl-32 slot">
+                <div className="flex flex-wrap gap-4 px-6 py-4 pl-20 overflow-scroll lg:pl-32 slot">
                   {groupedSlots[hourFormatted] &&
                     groupedSlots[hourFormatted].map((slot) => (
                       <div
                         key={slot.id}
-                        className={`relative flex items-center bg-white justify-between w-1/4 p-4 rounded-2xl shadow-md text-white border ${
+                        className={`relative flex items-center bg-white justify-between slot-card lg:w-1/3 w-full p-4 rounded-2xl shadow-md text-white border ${
                           slot.status === "Completed"
                             ? "border-green-500"
                             : slot.status === "Booked"

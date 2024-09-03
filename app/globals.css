@@ -33,7 +33,7 @@ body {
 }
 
 .slot {
-  height: 12rem !important;
+  height: 15rem !important;
 }
 
 .slot-chip {
@@ -54,7 +54,7 @@ body {
 }
 
 .chips {
-  padding: 0.3rem 0.7rem !important;
+  padding: 0.3rem 0.9rem;
 }
 
 .border-medium {
@@ -126,4 +126,28 @@ body {
 .member-menu:active {
   background-color: gray;
   opacity: 70%;
+}
+
+@media (max-width: 640px) {
+  .chip {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .chips {
+    padding: 0.2rem 0.5rem !important;
+    font-size: 12px;
+    width: auto !important;
+  }
+
+  .menu,
+  .member-menu {
+    padding: 0.6rem 0.4rem;
+    border-radius: 6px;
+  }
+
+  #headlessui-menu-button {
+    width: 3px;
+    height: 18px;
+  }
 }
