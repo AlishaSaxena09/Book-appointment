@@ -31,3 +31,99 @@ body {
     text-wrap: balance;
   }
 }
+
+.slot {
+  height: 12rem !important;
+}
+
+.slot-chip {
+  top: 0px !important;
+  right: -1px;
+  border-bottom-right-radius: 1px;
+  border-top-left-radius: 1px;
+}
+
+.opacity-0 {
+  opacity: 100% !important;
+  object-fit: cover !important;
+}
+
+.chip {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.chips {
+  padding: 0.3rem 0.7rem !important;
+}
+
+.border-medium {
+  border: 1px solid white;
+  color: white !important;
+  padding-top: 2px;
+  opacity: 50%;
+}
+
+.border-medium:hover {
+  opacity: 70%;
+}
+
+.text-secondary {
+  color: #fff !important;
+}
+
+.bg-default-50 {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(39, 38, 38, 1) 35%
+  );
+  color: #6572dc !important;
+  padding: 1rem !important;
+}
+
+.text-foreground {
+  color: #fff !important;
+  opacity: 70%;
+}
+
+[data-slot="selector-button"] {
+  width: 4px;
+  height: 20px;
+  margin-bottom: 3.5px;
+}
+
+#headlessui-menu-button {
+  border: 1px solid white !important;
+}
+
+.menu {
+  padding: 0.87rem 0.5rem;
+  border-radius: 9px;
+}
+
+.menu:hover {
+  background-color: gray;
+  opacity: 70%;
+}
+
+.menu:active {
+  background-color: gray;
+  opacity: 70%;
+}
+
+.member-menu {
+  padding: 0.87rem 0.5rem;
+  border-radius: 9px;
+}
+
+.member-menu:hover {
+  background-color: gray;
+  opacity: 70%;
+}
+
+.member-menu:active {
+  background-color: gray;
+  opacity: 70%;
+}
