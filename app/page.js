@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Calendar from "./components/Calendar";
 import Sidebar from "./components/Sidebar";
-import Memo from "./pages/Memo";
 import { useState } from "react";
 
 export default function Home() {
